@@ -166,7 +166,7 @@ const Hero = () => {
           <h3 className="text-[16px] sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 flex justify-center lg:justify-start items-center gap-2 flex-wrap">
 
             And I'm a
-             <div className="relative h-[35px] overflow-hidden items-center">
+             <div className="relative h-[35px] overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={titles[index]}
@@ -241,7 +241,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative flex justify-center items-center"
+          className="relative flex justify-center items-center pt-4"
         >
           <div className="relative w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] rounded-full flex justify-center items-center">
 
