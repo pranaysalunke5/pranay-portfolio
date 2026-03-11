@@ -163,7 +163,7 @@ const Hero = () => {
             Pranay Salunke
           </h1>
 
-          <h3 className="text-[16px] sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 flex justify-center lg:justify-start items-center gap-2 flex-wrap">
+          {/* <h3 className="text-[16px] sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 flex justify-center lg:justify-start items-center gap-2 flex-wrap">
 
             And I'm a
              <div className="relative h-[35px] overflow-hidden">
@@ -180,22 +180,28 @@ const Hero = () => {
                 </motion.span>
               </AnimatePresence>
             </div>
-            {/* <div className="relative h-[35px] overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={titles[index]}
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: -20, opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-[#00eeff] drop-shadow-[0_0_10px_#00eeff] block"
-                >
-                  {titles[index]}
-                </motion.span>
-              </AnimatePresence>
-            </div> */}
-          </h3>
+          </h3> */}
 
+<h3 className="text-[16px] sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 flex justify-center lg:justify-start items-center gap-2 whitespace-nowrap">
+
+  <span>And I'm a</span>
+
+  <div className="relative h-[1.2em] overflow-hidden flex items-center">
+    <AnimatePresence mode="wait">
+      <motion.span
+        key={titles[index]}
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: -20, opacity: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-[#00eeff] drop-shadow-[0_0_10px_#00eeff]"
+      >
+        {titles[index]}
+      </motion.span>
+    </AnimatePresence>
+  </div>
+
+</h3>
           <p className="text-gray-300 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base md:text-lg leading-relaxed mb-8">
             I'm a MERN Stack Developer with extensive experience in building
             complex web applications. My expertise is to create intuitive
