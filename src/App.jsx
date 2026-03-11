@@ -8,24 +8,24 @@ import Services from "./components/sections/Services";
 
 function App() {
   return (
-    <div className="bg-[#050505] text-white selection:bg-blue-500">
+    <div className="bg-[#050505] text-white selection:bg-blue-500 overflow-x-hidden">
       <Navbar />
-      <section id="home">
+      <section id="home" className="scroll-mt-24">
         <Hero />
       </section>
-      <section id="about">
+      <section id="about" className="scroll-mt-24">
         <About />
       </section>
-      <section id="services">
+      <section id="services" className="scroll-mt-24">
         <Services />
       </section>
-      <section id="projects">
+      <section id="projects" className="scroll-mt-24">
         <Projects />
       </section>
-      <section id="skills">
+      <section id="skills" className="scroll-mt-24">
         <Skills />
       </section>
-      <section id="contact">
+      <section id="contact" className="scroll-mt-24">
         <Contact />
       </section>
     </div>

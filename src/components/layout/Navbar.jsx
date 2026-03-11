@@ -48,28 +48,109 @@
 
 // export default Navbar;
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+// import { useState, useEffect } from 'react';
+// import { motion, AnimatePresence } from 'framer-motion';
+// import { Menu, X } from 'lucide-react';
+
+// const Navbar = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [active, setActive] = useState('Home');
+
+//   const navLinks = [
+//     { name: 'Home', href: '#home' },
+//     { name: 'About', href: '#about' },
+//     { name: 'Services', href: '#services' },
+//     { name: 'Skills', href: '#skills' },
+//     { name: 'Project', href: '#projects' },
+//     { name: 'contact', href: '#contact' },
+//   ];
+
+//   return (
+//     <nav className="fixed top-0 w-full z-[100] bg-[#101b4d] py-6 px-10">
+//       <div className="max-w-[1400px] mx-auto flex justify-between items-center">
+        
+//          <div className="text-2xl font-black tracking-tighter">PRANAY<span className="text-blue-500">.</span></div>
+
+//         <div className="hidden lg:flex items-center gap-10">
+//           {navLinks.map((link) => (
+//             <a
+//               key={link.name}
+//               href={link.href}
+//               onClick={() => setActive(link.name)}
+//               className={`text-[17px] font-medium transition-all duration-300 ${
+//                 active === link.name ? 'text-[#4fd1c5]' : 'text-white hover:text-[#4fd1c5]'
+//               }`}
+//             >
+//               {link.name}
+//             </a>
+//           ))}
+//         </div>
+
+//         <button 
+//           className="lg:hidden text-white p-2" 
+//           onClick={() => setIsOpen(!isOpen)}
+//         >
+//           {isOpen ? <X size={30} /> : <Menu size={30} />}
+//         </button>
+//       </div>
+
+//       <AnimatePresence>
+//         {isOpen && (
+//           <motion.div
+//             initial={{ opacity: 0, height: 0 }}
+//             animate={{ opacity: 1, height: 'auto' }}
+//             exit={{ opacity: 0, height: 0 }}
+//             className="lg:hidden bg-[#020617] overflow-hidden"
+//           >
+//             <div className="flex flex-col items-center py-10 gap-6">
+//               {navLinks.map((link) => (
+//                 <a
+//                   key={link.name}
+//                   href={link.href}
+//                   onClick={() => {
+//                     setActive(link.name);
+//                     setIsOpen(false);
+//                   }}
+//                   className={`text-xl font-medium ${
+//                     active === link.name ? 'text-[#4fd1c5]' : 'text-white'
+//                   }`}
+//                 >
+//                   {link.name}
+//                 </a>
+//               ))}
+//             </div>
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState('Home');
+  const [active, setActive] = useState("Home");
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Project', href: '#projects' },
-    { name: 'contact', href: '#contact' },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Skills", href: "#skills" },
+    { name: "Project", href: "#projects" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
     <nav className="fixed top-0 w-full z-[100] bg-[#101b4d] py-6 px-10">
       <div className="max-w-[1400px] mx-auto flex justify-between items-center">
-        
-         <div className="text-2xl font-black tracking-tighter">PRANAY<span className="text-blue-500">.</span></div>
+
+        <div className="text-2xl font-black tracking-tighter">
+          PRANAY<span className="text-blue-500">.</span>
+        </div>
 
         <div className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => (
@@ -78,7 +159,9 @@ const Navbar = () => {
               href={link.href}
               onClick={() => setActive(link.name)}
               className={`text-[17px] font-medium transition-all duration-300 ${
-                active === link.name ? 'text-[#4fd1c5]' : 'text-white hover:text-[#4fd1c5]'
+                active === link.name
+                  ? "text-[#4fd1c5]"
+                  : "text-white hover:text-[#4fd1c5]"
               }`}
             >
               {link.name}
@@ -86,42 +169,35 @@ const Navbar = () => {
           ))}
         </div>
 
-        <button 
-          className="lg:hidden text-white p-2" 
+        <button
+          className="lg:hidden text-white p-2"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
       </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-[#020617] overflow-hidden"
-          >
-            <div className="flex flex-col items-center py-10 gap-6">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => {
-                    setActive(link.name);
-                    setIsOpen(false);
-                  }}
-                  className={`text-xl font-medium ${
-                    active === link.name ? 'text-[#4fd1c5]' : 'text-white'
-                  }`}
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isOpen && (
+        <div className="lg:hidden bg-[#020617]">
+          <div className="flex flex-col items-center py-10 gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => {
+                  setActive(link.name);
+                  setIsOpen(false);
+                }}
+                className={`text-xl font-medium ${
+                  active === link.name ? "text-[#4fd1c5]" : "text-white"
+                }`}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
