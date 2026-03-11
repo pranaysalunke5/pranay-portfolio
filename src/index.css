@@ -12,12 +12,20 @@
   50% { opacity: 0; }
 } */
 
+
 @import "tailwindcss";
 
-html{
+/* Smooth scrolling */
+html {
   scroll-behavior: smooth;
 }
 
+/* Prevent horizontal scrollbar */
+body {
+  overflow-x: hidden;
+}
+
+/* Typing cursor */
 .typing-cursor::after {
   content: "|";
   animation: blink 1s infinite;
@@ -25,7 +33,12 @@ html{
   margin-left: 4px;
 }
 
+/* Cursor blinking animation */
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
