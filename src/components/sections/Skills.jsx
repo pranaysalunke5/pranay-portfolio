@@ -115,7 +115,7 @@ const Skills = () => {
         {/* TECHNICAL SKILLS */}
         <div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 border-b-4 border-white inline-block pb-2">
-            Technical Skills
+            Technical<span className="text-[#00eeff]"> Skills</span>
           </h2>
 
           <div className="space-y-5">
